@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Solidarity Fund - Donations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #001f3f;
+      margin: 0;
+      padding: 0;
+    }
+  .site-header {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 200px;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  background-color: #004080;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.logo img {
+  height: 50px;
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+.user{
+  font-size:40px;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #001f3f;
+    }
+    .explanations{
+      background-color: white;
+      padding: 1rem;
+      border-bottom: 4px solid;
+      border-radius:10px;
+      box-shadow:0px 0px 10px 0px rgba(0,0,0,0.6);
+      font-weight:bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      background-color: #001f3f;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .donor-list {
+      margin-top: 2rem;
+    }
+
+    .donor {
+      background: #fff;
+      border-left: 4px solid #001f3f;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+    }
+
+    .total {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .nav-menu a {
+    color: #003366;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="user">🤝
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">HOME</a>
+    <a href="vote.html">VOTE</a>
+    <a href="fellowship.html">FELLOWSHIP</a>
+    <a href="students.html">STUDENTS</a>
+    <a href="events.html">EVENTS</a>
+    <a href="report.html">REPORT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</header>
+
+
+  <div class="container">
+    <h2>Make a Donation</h2>
+    <div class="explanations">
+      The funds collected are not for us. They are for those who are silently suffering — orphans with no one to turn to, patients battling serious illnesses without the means to pay for treatment, and students on the verge of dropping out because they can’t afford rent, food, or medical care. Your donation could be the reason someone gets another chance.
+    </div>
+    <form id="donation-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" placeholder="John Doe">
+
+      <label><input type="checkbox" id="anonymous"> Donate Anonymously</label>
+
+      <label for="amount">Amount (€):</label>
+      <input type="number" id="amount" required>
+
+      <button type="submit">Submit Donation</button>
+    </form>
+
+    <div class="donor-list">
+      <div class="total">Total Collected: €<span id="total">0</span></div>
+      <h3>Recent Donations:</h3>
+      <div id="donors">
+        <!-- Donors will appear here -->
+      </div>
+      <p style="text-align:center;">Thank you for your kindness. Together, we make a difference. ❤️</p>
+    </div>
+  </div>
+  <!-- You're right—some payment gateways, like Flutterwave’s direct-checkout, currently only support Nigeria and Rwanda, making them unavailable for Uganda.
+
+---
+
+## ✅ Uganda-Compatible Mobile Money Options
+
+### 1. **Flutterwave (Uganda Mobile Money via API)**
+
+You can still use **Flutterwave** for Uganda! They offer a **Mobile Money Uganda** API:
+
+* Collect payments via **MTN or Airtel Uganda** using Flutterwave’s `mobile_money_uganda` type ([developer.flutterwave.com][1]).
+* It works via API, not the popup, meaning you'll need a bit of backend code.
+* You'll get a callback when the payment is completed—perfect for automatically adding donors to the list.
+
+---
+
+### 2. **MTN MoMo & Airtel Uganda Open APIs**
+
+Both MTN and Airtel now offer **Open APIs** for Uganda:
+
+* **MTN Open API** includes a "Collections" endpoint to initiate a request-to-pay and receive status notifications ([mtn.co.ug][2]).
+* **Airtel Uganda APIs** were launched in May 2023, enabling secure mobile money integrations ([uncdf.org][3]).
+
+These require you to:
+
+* Sign up on their developer portals (e.g., momodeveloper.mtn.com).
+* Build server-side logic to request the payment and await the callback.
+
+---
+
+### 3. **Use a Payment Aggregator**
+
+If you'd prefer to avoid dealing with individual APIs and compliance, consider using an **aggregator** like:
+
+* **Relworx Payments API** — supports both MTN & Airtel in Uganda ([payments.relworx.com][4]).
+* **BlinkPay** — supports Airtel and MTN Uganda .
+
+These platforms handle the heavy lifting—you can integrate a single API and handle PPS notifications.
+
+---
+
+## 🛠️ What You Need to Do
+
+1. **Choose your integration method**:
+
+   * Yap API via Flutterwave (with backend).
+   * Direct MTN / Airtel via Open APIs.
+   * Aggregator like Relworx or BlinkPay.
+
+2. **Flow for auto-listing donors**:
+
+   * User enters name/donation amount.
+   * You initiate payment via API.
+   * Customer approves via USSD or mobile prompt.
+   * Your server receives callback/webhook on success.
+   * Server pushes data to Google Sheet (or DB).
+   * Frontend fetches updated list—no manual input.
+
+---
+
+## ✅ Recommended Quick Path
+
+* Use **Flutterwave Mobile Money Uganda** if you’re comfortable with minimal server code.
+* Or use **Relworx** for quickest path:
+
+  * Single API for both MTN & Airtel active in Uganda.
+  * Handle callbacks and publish to Google Sheets + page.
+
+---
+
+Would you like a **sample backend script** using Flutterwave or Relworx? Or help setting up **MTN MoMo API** with callbacks?
+
+[1]: https://developer.flutterwave.com/docs/direct-charge/uganda-mobile-money/?utm_source=chatgpt.com "Mobile Money(Uganda)"
+[2]: https://www.mtn.co.ug/helppersonal/mtn-open-api/?utm_source=chatgpt.com "MTN Open API - MTN Uganda"
+[3]: https://www.uncdf.org/article/8241/airtel-money-and-uncdf-launch-open-apis-to-support-innovators-accelerate-digital-financial-inclusion?utm_source=chatgpt.com "Airtel Money and UNCDF launch Open APIs to Support Innovators Accelerate Digital Financial Inclusion - UN Capital Development Fund (UNCDF)"
+[4]: https://payments.relworx.com/docs/?utm_source=chatgpt.com "Introduction | Relworx Payments API Documentation"
+-->
+
+  <footer>
+    &copy; 2025 Congolese Students Association. All rights reserved.
+  </footer>
+
+  <script src="script.js">
+    const form = document.getElementById('donation-form');
+    const totalEl = document.getElementById('total');
+    const donorsEl = document.getElementById('donors');
+
+    let total = 0;
+    let donations = [];
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById('name');
+      const anonymous = document.getElementById('anonymous').checked;
+      const amount = parseFloat(document.getElementById('amount').value);
+
+      if (isNaN(amount) || amount <= 0) return;
+
+      const donorName = anonymous || !nameInput.value.trim()
+        ? 'Anonymous'
+        : nameInput.value.trim();
+
+      donations.unshift({ name: donorName, amount });
+
+      total += amount;
+      totalEl.textContent = total.toFixed(2);
+
+      renderDonors();
+
+      // Reset form
+      nameInput.value = '';
+      document.getElementById('amount').value = '';
+      document.getElementById('anonymous').checked = false;
+    });
+
+    function renderDonors() {
+      donorsEl.innerHTML = '';
+      donations.slice(0, 10).forEach(donor => {
+        const div = document.createElement('div');
+        div.className = 'donor';
+        div.innerHTML = `<strong>${donor.name}</strong> donated €${donor.amount.toFixed(2)}`;
+        donorsEl.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
