@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOTE</title>
+  <link rel="stylesheet" href="style-vote.css">
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/font-awesome.min.css"
+    />
+      <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.1/css/all.css"
+    />
+  
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="vote-logo">
+    <img src="https://www.tccd.edu/magazine/assets/images/volume-07/issue-01/voting/voting-header.jpg" alt="voteimg">
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">
+<i class="fa-thin fa-house">HOME</i></a>
+    <a href="students.html">STUDENTS</a>
+    <a href="fellowship.html">FELLOWSHIP</a>
+    <a href="events.html">EVENTS</a>
+    <a href="report.html">REPORT</a>
+    <a href="cagnote.html">CAGNOTE</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</header>
+    <h1> YOUR VOTE <br> YOUR CHOICE</h1>
+<h1>📊 BUCOSA Voting Portal</h1>
+<p id="p">Welcome to the official voting page of the Congolese <a href="students.html">Students'</a> Association. Your vote is your voice! Participate in choosing our leaders or making key decisions for our community.</p>
+
+
+
+<div class="how_to_vote">
+    <div class="htv-container-1">
+      <div class="how_to_vote-img">
+        <img src="https://images.theconversation.com/files/633919/original/file-20241123-15-5fbxcw.jpg?ixlib=rb-4.1.0&rect=10%2C0%2C1719%2C1721&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="">
+      </div>
+      <div class="how_to_vote-h2"><h2>📝 How to Vote</h2></div>   
+    </div>
+        
+    <div class="htv-container-2">
+      <ul class="wrap">
+        <li>You must be <br> a registered BUCOSA member.</li>
+        <li>Each student can vote only once per election.</li>
+        <li>Voting closes on: <strong>--, 2026 at --:-- PM</strong>.</li>
+      </ul>
+    </div>
+</div>
+<h2>👤 Candidates for President</h2>
+<div class="candidate-grid">
+  <div class="candidate-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/219/219959.png" alt="Candidate 1">
+    <h3>ANONYMOUS PERSON</h3>
+    <p>“Empowering unity through leadership.”</p>
+    <button>Vote for ANONYMOUS</button>
+  </div>
+
+  <div class="candidate-card">
+    <img src="https://us.123rf.com/450wm/grgroup/grgroup1612/grgroup161204998/67411271-femme-ic%C3%B4ne-fille-people-personne-d-avatar-f%C3%A9minin-et-le-th%C3%A8me-humain-conception-isol%C3%A9e-vector.jpg?ver=6" alt="Candidate 2">
+    <h3>ANONYMOUS PERSON</h3>
+    <p>“Serving students with integrity.”</p>
+    <button>Vote for ANONYMOUS</button>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
