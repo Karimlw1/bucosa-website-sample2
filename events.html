@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Congolese Students Association</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<style>
+        
+ body{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ word-wrap: break-word;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 200px;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  background-color: #004080;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.logo img {
+  height: 50px;
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+.user{
+  font-size: 40px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+      
+        .container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+        h2 {
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 0.5rem;
+        }
+        .event {
+            border-left: 4px solid #001f3f;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            cursor:pointer;
+            transition:all ease-in-out 0.4s;
+        }
+        .event-p{ border-left: 4px solid #001f3f;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            cursor:no-drop;
+            transition:all ease-in-out 0.4s;
+            }
+        .event:hover {
+            transform: scale(1.03); 
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+            background-color: #006811;
+            color: white;
+        }
+        .event-p:hover{
+          transform: scale(1.03); 
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
+            background-color: #860000;
+            color: white;
+        }
+
+        .event h3 {
+            margin-top: 0;
+            color: #001f3f;
+        }
+        .event-date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: grey;
+           
+        }
+        
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .nav-menu a {
+    color: #003366;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+}
+@media (max-width: 400px){
+  
+  .event-p{
+    background-color:#860000;
+    color: white;
+  }
+}
+    </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="user">
+    🗓️
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">HOME</a>
+    <a href="vote.html">VOTE</a>
+    <a href="fellowship.html">FELLOWSHIP</a>
+    <a href="students.html">STUDENTS</a>
+    <a href="report.html">REPORT</a>
+    <a href="cagnote.html">CAGNOTE</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</header>
+
+    <div class="container">
+        <section id="upcoming-events">
+            <h2 style="color: green;">Upcoming Events</h2>
+
+            <div class="event">
+                <h3>Independence Day Celebration</h3>
+                <p class="event-date">June 30, 2025 - 5:00 PM</p>
+                <p>Join us for a cultural celebration with music, food, and community! Location: Campus Auditorium.</p>
+            </div>
+
+            <div class="event">
+                <h3>Back to School BBQ</h3>
+                <p class="event-date">September 5, 2025 - 2:00 PM</p>
+                <p>Welcome back to campus! Free food and games to start the semester right.</p>
+            </div>
+        </section>
+
+        <section id="past-events">
+            <h2 style="color: red;">Past Events</h2>
+
+            <div class="event-p">
+                <h3>END SEMESTER BBQ</h3>
+                <p class="event-date">May 14, 2025</p>
+                <p>Was a Students party at purple hostel 100% vibe no truble, over 100 students attended .</p>
+            </div>
+
+            <div class="event-p">
+                <h3>Fly beach</h3>
+                <p class="event-date">March 22, 2025</p>
+                <p>A vibrant trip of Congolese & other students from various campuses... ; food, yacht trip, sweeming, dance.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 Congolese Students Association. All rights reserved.
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
