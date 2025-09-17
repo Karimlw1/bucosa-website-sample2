@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <title>Send a Report - Congolese Students Association</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #001f3f;
+      margin: 0;
+      padding: 0;
+    }
+
+   .site-header {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 200px;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0 15px 0;
+  background-color: #004080;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.logo img {
+  height: 50px;
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+.user{
+      background-color: transparent;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      align-content: center;
+      border-radius: 50px;
+      border: solid white 2px;
+    }
+.fa-paper-plane{
+      color: #ffffff;
+      font-size: 25px;
+
+}
+
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 2rem;
+      border-radius: 8px;
+      background-color: #f8f8f8;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #001f3f;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #001f3f;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #001f3f;
+      color: white;
+      margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .nav-menu a {
+    color: #003366;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  
+}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+  <div class="user">
+    <i class="fas fa-paper-plane"></i>
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">HOME</a>
+    <a href="vote.html">VOTE</a>
+    <a href="fellowship.html">FELLOWSHIP</a>
+    <a href="students.html">STUDENTS</a>
+    <a href="report.html">REPORT</a>
+    <a href="cagnote.html">CAGNOTE</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</header>
+
+
+  <div class="container">
+    <h2>Submit a Concern or Incident</h2>
+
+    <form action="/submit-report" method="POST">
+      <label for="name">Your Name (optional):</label>
+      <input type="text" id="name" name="name" placeholder="exemple: abdoul karim lw">
+
+      <label for="email">Email (optional):</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com">
+
+      <label for="type">Report Type:</label>
+      <select id="type" name="type" required>
+        <option value="">Select one</option>
+        <option value="harassment">Harassment or Discrimination</option>
+        <option value="feedback">Feedback or Suggestions</option>
+        <option value="support">Request for Support</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Describe the situation..."></textarea>
+
+      <button type="submit">Send Report</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Congolese Students Association. All rights reserved.
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
