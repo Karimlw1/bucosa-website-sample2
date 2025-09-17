@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <title>students</title>
+  <style>
+   
+  </style>
+
+</head>
+<body id="body2">
+  <header class="site-header">
+  <div class="user">
+    <i class="fa fa-user-o"></i>
+  </div>
+
+  <nav class="nav-menu" id="navMenu">
+    <a href="index.html">HOME</a>
+    <a href="vote.html">VOTE</a>
+    <a href="fellowship.html">FELLOWSHIP</a>
+    <a href="events.html">EVENTS</a>
+    <a href="report.html">REPORT</a>
+    <a href="cagnote.html">CAGNOTE</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
+</header>
+   <div class="poster">
+      <div class="post" id="poster1">
+        <div id="post_place">
+          <img
+            src="https://b2326392.smushcdn.com/2326392/wp-content/uploads/2016/05/1971_bugema.library-Optimized.jpg?lossy=1&strip=1&webp=1"
+            alt="photo"
+            id="photo_post"
+          />
+          <textarea name="legende" id="legende" readonly>
+            #legend
+          </textarea>
+
+          <div id="reactions">
+            <i id="far-size" class="fa fa-heart"> </i>
+
+            <i id="far-size" class="fa fa-thumbs-down">
+              <br />
+            </i>
+            
+            <i id="far" class="far fa-comment-dots">
+              <br />
+            </i>
+            <i id="far" class="far fa-bookmark">
+              <br />
+            </i>
+            <i id="far-insta" class="fa fa-instagram"> </i>
+          </div>
+
+          <div class="comment-section">
+            <i
+              class="fa fa-close"
+              id="fa-close-programmer"
+              onclick="closeCommentSection(event)"
+            >
+            </i>
+
+            <div class="comments">
+              <div class="comment">
+                <div class="user">
+                  <i class="fa fa-user">
+                    <p id="username">samuel speaker</p>
+                  </i>
+                </div>
+                <p class="user-comment">karim ni chef</p>
+              </div>
+
+              <div class="comment">
+                <div class="user">
+                  <i class="fa fa-user">
+                    <p id="username">mugisha asimwe</p>
+                  </i>
+                </div>
+                <p class="user-comment">wapi pale?</p>
+              </div>
+
+              <div class="comment">
+                <div class="user">
+                  <i class="fa fa-user">
+                    <p id="username">Quenn nelie</p>
+                  </i>
+                </div>
+                <p class="user-comment">Khaaaaaa</p>
+              </div>
+            </div>
+
+            <div id="input-send">
+              <input
+                type="text"
+                class="comment-input"
+                placeholder="writte a comment...."
+              />
+              <i
+                id="fa-send"
+                class="fa fa-paper-plane"
+                onclick="sendInput(event)"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="poster">
+      <div class="post" id="poster2">
+        <div id="post_place">
+          <img
+            src="https://pbs.twimg.com/media/GsNSdydWkAAPNvp?format=jpg&name=large"
+            alt="photo"
+            id="photo_post"
+          />
+          <textarea name="legende" id="legende" readonly>
+            #legend
+          </textarea>
+        </div>
+
+        <div id="reactions">
+          <i id="far-size" class="fa fa-heart"> </i>
+
+          <i id="far-size" class="fa fa-thumbs-down">
+            <br />
+          </i>
+          <i id="far" class="far fa-comment-dots">
+            <br />
+          </i>
+          <i id="far" class="far fa-bookmark">
+            <br />
+          </i>
+          <i id="far-insta" class="fa fa-instagram"> </i>
+        </div>
+
+        <div class="comment-section">
+          <i
+            class="fa fa-close"
+            id="fa-close-programmer"
+            onclick="closeCommentSection(event)"
+          >
+          </i>
+
+          <div class="comments">
+            <div class="comment">
+              <div class="user">
+                <i class="fa fa-user">
+                  <p id="username">samuel speaker</p>
+                </i>
+              </div>
+              <p class="user-comment">karim ni chef</p>
+            </div>
+
+            <div class="comment">
+              <div class="user">
+                <i class="fa fa-user">
+                  <p id="username">mugisha asimwe</p>
+                </i>
+              </div>
+              <p class="user-comment">wapi pale?</p>
+            </div>
+
+            <div class="comment">
+              <div class="user">
+                <i class="fa fa-user">
+                  <p id="username">Quenn nelie</p>
+                </i>
+              </div>
+              <p class="user-comment">Khaaaaaa</p>
+            </div>
+          </div>
+
+          <div id="input-send">
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="writte a comment...."
+            />
+            <i
+              id="fa-send"
+              class="fa fa-paper-plane"
+              onclick="sendInput(event)"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="script.js">
+</script>
+</body>
+</html>
