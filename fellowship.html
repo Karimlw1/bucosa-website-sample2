@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+
+    body {
+      margin-top:120px;
+    }
+    .site-header {
+      display: flex;
+      justify-content: space-around;
+      gap:10px;
+      align-items: center;
+      width: 100%;
+      padding: 5px 15px 5px 0;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+
+    .nav-menu {
+      display: flex;
+      gap: 25px;
+      z-index: 2;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      color: #003366;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #007bff;
+    }
+
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #003366;
+    }
+    section a{
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: solid 3px #003366;
+      padding-bottom: 5px;
+      transition: all ease-in-out 0.4s;
+    }
+    section a:hover{
+      color: #007bff;
+      font-weight: bold;
+      border-bottom: solid 3px #007bff;
+      padding-bottom: 1px;
+    }
+    #p{
+      border-left: solid 4px #003366;
+      padding-left: 20px;
+    }
+    #message{
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      color: #003366;
+      line-height: 25px;
+      font-weight: bold;
+
+    }
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .nav-menu a {
+        color: #003366;
+      }
+      .nav-menu.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+      
+    }
+  </style>
+
+</head>
+<body>
+    <header class="site-header">
+      <div class="header-logo">
+        <img src="https://i.imgur.com/JQU5LwL.jpg" alt="" style="width:100px;">
+      </div>
+      <div class="header-title">
+        <h1 style="color: #003366; text-align: center;"> BUCOSA Fellowship
+        </h1>
+      </div>     
+      <div class="header-nav">
+        <nav class="nav-menu" id="navMenu">
+          <a href="index.html">HOME</a>
+          <a href="vote.html">VOTE</a>
+          <a href="students.html">STUDENTS</a>
+          <a href="events.html">EVENTS</a>
+          <a href="report.html">REPORT</a>
+          <a href="cagnote.html">CAGNOTE</a>
+          <a href="contact.html">CONTACT</a>
+        </nav>
+      </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          &#9776;
+        </div>
+    </header>
+  
+  <div class="fellowship-section" style="max-width: 850px; margin: 40px auto; padding: 20px; font-family: 'Arial', sans-serif; line-height: 1.7;">
+  
+  <p style="text-align: center; font-style: italic; color: #666;">
+    “For where two or three are gathered in my name, there am I among them.” – Matthew 18:20
+  </p>
+
+  <section style="margin-top: 30px;">
+    <h2>🌿 About the Fellowship</h2>
+    <p id="p">
+      BUCOSA Fellowship is the spiritual heartbeat of the Congolese Students' Association. It's a space where students come together to grow in faith, encourage one another, and experience God's presence in the university setting. Whether you’re seeking spiritual guidance, friendship, or just a place to worship, our fellowship welcomes you with open arms.
+    </p>
+  </section>
+
+  <section style="margin-top: 30px;">
+    <h2>🙏 What We Do</h2>
+    <ul style="padding-left: 20px;">
+      <li>Weekly fellowship meetings filled with worship, prayer, and the Word of God.</li>
+      <li>Bible study sessions led by fellow students and invited speakers.</li>
+      <li>Prayer nights and spiritual retreats to reconnect and reflect.</li>
+      <li>Encouraging testimonies, discussions, and music ministry.</li>
+      <li>Special worship events during important cultural or academic seasons.</li>
+    </ul>
+  </section>
+
+  <section style="margin-top: 30px;" id="message">
+    <h2 style="color: #918202">💬 A Message to You</h2>
+    <p>
+      University life can be overwhelming at times. BUCOSA Fellowship is a place where you can find peace, purpose, and strength in Christ. You don’t need to have all the answers — just come as you are. Together, we’ll walk this journey of faith, lifting each other up and growing in God's love.
+    </p>
+  </section>
+
+  <section style="margin-top: 30px;">
+    <h2>📍 When & Where</h2>
+    <p>
+      <strong>Every TUESDAY and THURSDAY @ 7:00 PM</strong><br />
+      Venue: Main Campus / AGRIC BLOCK (or as communicated via our <a href="https://chat.whatsapp.com/DGyqkyBJL5Z0uE2YjUTUYs?fbclid=PAZXh0bgNhZW0CMTEAAafn3ZBj2C30d-G8jOjqzlQyBGJkNiQ-EvwFVA359LGgvGmYtgKd4g7ytls_8A_aem_7FKzkHRc8os8dfr7laWtgQ"> WhatsApp group </a>)
+    </p>
+  </section>
+
+  <section style="margin-top: 30px; text-align: center; font-style: italic; color: #555;">
+    <p>“Seek first the kingdom of God and His righteousness, and all these things will be added to you.” – Matthew 6:33</p>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
